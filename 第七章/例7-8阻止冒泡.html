@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <div>div元素</div>
+    <script>
+        var div = document.querySelector('div');
+        div.addEventListener('click', function () {
+            console.log('目标阶段div');
+        });
+        document.body.addEventListener('click', function (e) {
+            console.log('冒泡阶段body');
+            e.stopPropagation();
+        });
+        document.addEventListener('click', function () {
+            console.log('冒泡阶段document');
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = prompt('请输入AQI的值');
+        if(x<0){
+            console.log('输入有误');
+        }
+        else if(x<=50){
+            console.log('空气质量为'+'优，空气清新，参加户外活动');
+
+        }else if(x<=100){
+            console.log('空气质量为'+'良，可以正常进行户外活动');
+
+        }else if(x<=150){
+            console.log('空气质量为'+'轻度污染，敏感人群减少体力消耗大的户外活动');
+
+        }else if(x<=200){
+            console.log('空气质量为'+'中度污染，对敏感人群影响较大，减少户外活动');
+
+        }else if(x<=300){
+            console.log('空气质量为'+'重度污染，适当减少户外活动');
+
+        }else {
+            console.log('空气质量为'+'严重污染，尽量不要留在户外');
+
+        }
+    </script>
+</body>
+</html>

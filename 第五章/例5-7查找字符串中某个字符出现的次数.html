@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 查找字符串中某个字符所有出现次数
+        // 核心算法：先查找第一个o出现的位置
+        // 然后 只要indexOf 返回的结果不是 -1 就继续往后查找
+        // 因为indexOf 只能查找到第一个，所以后面的查找，一定是当前索引加1，从而继续查找
+
+        var str = '兑现"两个奥运、同样精彩"的庄严承诺—北京冬奥组委总结冬残奥会';
+        var index = str.indexOf('奥');
+        var num = 0;
+         while (index !== -1) {
+            num++;
+            index = str.indexOf('奥', index + 1);
+        }
+        console.log('"奥"出现的次数是: ' + num);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

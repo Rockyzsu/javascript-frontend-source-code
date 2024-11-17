@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="oDiv">
+        <input class="myInput" type="text" value="1" />
+        <input class="myInput" type="text" value="2" />
+        <input class="myInput" type="text" value="3" />
+    </div>
+    <script>
+        var oDiv = document.getElementById('oDiv');
+        var myInputs = document.getElementsByClassName('myInput');
+        var myInputs2 = oDiv.getElementsByClassName('myInput');
+        console.log(myInputs.length);
+        console.log(myInputs2.length);      
+    </script>
+</body>
+
+</html>

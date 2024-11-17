@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+/*新冠肺炎疫情风险等级划分。
+根据新冠肺炎疫情实际情况和发展态势，综合考虑新增和累计确诊病例数等因素，以县
+市区为单位，划分为低风险区、中风险区、高风险区。
+低风险区：无确诊病例或连续14天无新增确诊病例。
+中风险区：14天内有新增确诊病例，累计确诊病例不超过50例，或累计确诊病例超过
+50例，14天内未发生聚集性疫情。
+高风险区：累计病例超过50例，14天内有聚集性疫情发生。*/
+
+var newConfirm = prompt('请输入14天新增确诊病例数：');
+var totalConfirm = prompt('请输入累计确诊病例数：');
+var days = prompt('请输入14天内聚集性疫情发生天数：');
+var result = '';
+if(newConfirm == 0 ||totalConfirm ==0 ){
+    result = '该地区为低风险区';
+}
+else if((newConfirm>0 && totalConfirm<=50)||(totalConfirm>50 && days == 0)){
+    result = '该地区为中风险区';
+}
+else 
+result = '该地区为高风险区';
+alert('14天新增确诊病例数:'+newConfirm+'\n'+'累计确诊病例数：'+totalConfirm+'\n'+'14天内聚集性疫情发生天数：'+days+'\n'+result);
+
+    </script>
+</body>
+
+</html>

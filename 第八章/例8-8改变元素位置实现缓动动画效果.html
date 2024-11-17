@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        var timer = setInterval(function() {
+            if (div.offsetLeft == 400) {
+                // 停止动画 本质是停止定时器
+                clearInterval(timer);
+            }
+            var step = (400 - div.offsetLeft) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+            div.style.left = div.offsetLeft + step + 'px';
+        }, 30);
+    </script>
+</body>
+
+</html>

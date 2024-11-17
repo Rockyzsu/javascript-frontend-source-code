@@ -1,0 +1,238 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>留言板</title>
+  <style>
+    #outside {
+
+      width: 1000px;
+
+      margin: 0 auto;
+
+      /* border: 1px solid black; */
+
+      overflow: hidden;
+
+      padding-bottom: 15px;
+
+    }
+
+
+
+    #outside h3 {
+
+      width: 95%;
+
+      margin: 15px auto;
+
+      padding-bottom: 10px;
+
+      border-bottom: 2px solid red;
+
+      font-family: "宋体", sans-serif;
+      color: red;
+      font-weight: 900;
+      font-size: 25px;
+
+    }
+
+
+
+    #outside .comment1 {
+
+      width: 95%;
+
+      margin: 10px auto;
+
+      color: #BBBBBB;
+
+      font-size: 12px;
+
+      border-bottom: 1px dashed red;
+
+      font-family: "宋体", sans-serif;
+
+    }
+
+
+
+    #outside .comment1 time {
+
+      float: right;
+      color: black;
+
+    }
+
+
+
+    #outside .comment1 span {
+
+      color: #5979B2;
+
+      margin-left: 5px;
+
+      font-weight: bold;
+
+    }
+
+
+
+    #outside .comment1 p {
+
+      font-size: 16px;
+
+      color: black;
+
+    }
+
+
+
+    #outside h4 {
+
+      width: 95%;
+
+      margin: 15px auto;
+
+      color: #404E73;
+
+      font-size: 16px;
+
+      font-weight: bold;
+
+      font-family: "宋体", sans-serif;
+
+    }
+
+
+
+    #outside #addComment {
+
+      width: 95%;
+
+      margin: 0 auto;
+
+      font-size: 12px;
+
+      color: #BBBBBB;
+
+    }
+
+
+
+    #outside #name {
+
+      width: 200px;
+
+      border: 1px solid #D9E2EF;
+
+    }
+
+
+
+    #outside #comContent {
+
+      width: 800px;
+
+      height: 100px;
+
+      resize: none;
+
+      border: 1px solid #D9E2EF;
+
+      vertical-align: text-top;
+
+    }
+
+
+
+    #addComment button {
+
+      width: 100px;
+
+      height: 30px;
+
+      background-color: #2D46A3;
+
+      color: white;
+
+      border: hidden;
+
+      float: right;
+
+      margin: 15px 100px;
+
+    }
+
+    .del {
+      width: 50px;
+
+      height: 30px;
+
+      background-color: #2D46A3;
+
+      color: white;
+
+      border: hidden;
+
+
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="outside">
+    <h3>全部留言</h3>
+    <div id="comment">   
+    </div>
+    <h4>发表留言</h4>
+    <div id="addComment">
+      昵    称：<input type="text" id="name" />
+      <br /><br />
+      留言内容:<textarea id="comContent"></textarea>
+      <button id='tjpl'>发表留言</button>
+    </div>
+  </div>
+  <script>
+    var comment = document.querySelector('#comment');
+    var ips = document.querySelector('input');
+    var textarea = document.querySelector('textarea');
+    var tjpl = document.getElementById('tjpl')
+    tjpl.onclick = function () {
+      if (ips.value == '' || textarea.value == '') {
+        alert("输入不能为空！");
+        return;
+      }
+      var divs = document.createElement('div');
+      divs.className = 'comment1';
+      divs.innerHTML = '网友昵称:';
+      comment.appendChild(divs);
+      var spans = document.createElement('span');
+      spans.innerHTML = ips.value;
+      divs.appendChild(spans);
+      var time = document.createElement('time');
+      time.innerHTML = new Date().toLocaleString();
+      divs.appendChild(time);
+      var ps = document.createElement('p');
+      ps.innerHTML = textarea.value;
+      divs.appendChild(ps);
+      var del = document.createElement('button');
+      del.className = 'del';
+      del.innerHTML = '删除';
+      divs.appendChild(del);
+     
+        del.onclick = function () {
+          comment.removeChild(this.parentNode);
+        }
+      
+      ips.value = '' ;
+       textarea.value = '';
+    }
+  </script>
+</body>
+
+</html>

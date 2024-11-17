@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        select {
+            margin: 42px;
+            width: 300px;
+            height: 40px;
+            font-size: 30px;
+        }
+        body {
+            background: url(images/1.jpg) no-repeat 50px 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+<select name="" id="sel">
+    <option value="1">“祝融”探火</option>
+    <option value="2">“羲和”逐日</option>
+    <option value="3">“天和”遨游星辰</option>   
+</select>
+<script>
+    var sel = document.getElementById("sel");
+    var bd = document.body;  
+    sel.onchange = function () {
+            switch (sel.value){
+            case "1":
+                bd.style.backgroundImage = "url(images/1.jpg)";
+                break;
+            case "2":
+                bd.style.backgroundImage = "url(images/2.jpg)";
+                break;
+            case "3":
+                bd.style.backgroundImage = "url(images/3.jpg)";
+                break;            
+        }
+    }
+</script>
+
+
+
+
+</body>
+</html>

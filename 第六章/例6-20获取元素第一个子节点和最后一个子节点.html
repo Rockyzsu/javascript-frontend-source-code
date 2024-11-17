@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>我是p元素</h1>
+        <span>我是li2</span>
+        <p>我是li3</p>       
+    </div>
+    <script>
+        var div = document.querySelector('div');      
+        console.log(div.firstChild);
+        console.log(div.lastChild);
+        // 2. firstElementChild 返回第一个子元素节点 ie9才支持
+        console.log(div.firstElementChild);
+        console.log(div.lastElementChild);
+        // 3. 实际开发的写法  既没有兼容性问题又返回第一个子元素
+        console.log(div.children[0]);
+        console.log(div.children[div.children.length - 1]);
+    </script>
+</body>
+
+</html>

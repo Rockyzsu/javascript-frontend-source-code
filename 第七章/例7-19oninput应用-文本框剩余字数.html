@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <style>
+        small,
+        textarea {
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <textarea></textarea>
+    <br /><small>文字最大长度: 200字符. 还剩: <span id="chLeft">200</span>字符</small>
+    <script type="text/javascript">
+        var txt = document.querySelector('textarea');
+        txt.oninput = function () {
+            var maxChars = 200;
+            if (this.value.length > maxChars)
+            this.value = this.value.substring(0, maxChars);
+            var curr = maxChars - this.value.length;
+            document.getElementById("chLeft").innerHTML = curr.toString();
+        }
+    </script>
+</body>
+
+</html>

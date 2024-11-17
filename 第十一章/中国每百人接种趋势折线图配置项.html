@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ECharts入门示例</title>
+    <!-- 引入刚刚下载的 ECharts 文件 -->
+    <script src="echarts.min.js"></script>
+  </head>
+  <body>
+    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+      // 基于准备好的dom，初始化echarts实例
+      var myChart = echarts.init(document.getElementById('main'));
+      // 指定图表的配置项和数据
+      var option = {
+       //标题
+       title: {
+        //标题文本
+         text: "中国每百人接种趋势",
+         //标题文本样式
+         textStyle: {
+             color: 'black',
+         },
+          //标题位置
+         left: 'left',
+     },
+     //提示信息
+     tooltip: {
+         trigger: 'axis',//触发类型：坐标轴触发
+         //指示器
+         axisPointer: {
+             type: 'line',//指示器类型'line' 直线指示器'shadow' 阴影指示器'none' 无指示器
+             lineStyle: {
+                 color: '#7171C6'//指示器颜色
+             }
+         },
+     },      
+        //图形位置
+        grid: {
+            left: '4%',//grid 组件离容器左侧的距离
+            right: '6%',//grid 组件离容器右侧的距离
+            bottom: '4%',//grid 组件离容器底部的距离          
+            containLabel: true//grid 区域是否包含坐标轴的刻度标签
+        },
+        //X轴
+        xAxis: [{
+            type: 'category',//'category' 类目轴，适用于离散的类目数据，为该类型时必须通过 data 设置类目数据。
+			axisLabel: {//坐标轴刻度标签的相关设置
+                show: true,
+                color: 'black',
+                fontSize: 12
+        },
+            data: ['3.20', '3.21', '3.22']//X轴数据
+        }],
+        //Y轴
+        yAxis: [{
+            type: 'value',//数值轴，适用于连续数据。
+            //y轴字体设置
+            axisLabel: {//坐标轴刻度标签的相关设置
+                show: true,
+                color: 'black',
+                fontSize: 12                
+            },          
+            //与x轴平行的线样式
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#6E7079',
+                    width: 1,
+                    type: 'solid',
+                }
+            }
+        }],
+        //系列列表
+        series: [{            
+            type: 'line',// 图形类型            
+            data: [6, 9, 17]//系列数据
+        }]
+    }; 
+      // 使用刚指定的配置项和数据显示图表。
+      myChart.setOption(option);
+    </script>
+  </body>
+</html>

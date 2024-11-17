@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <script>
+	var mineMap = [];
+	for(var i=0;i<50;i++){		
+	 mineMap[mineMap.length] = { mine: 0 };	
+	}	
+	var minesNum = 10;
+	 while (minesNum) {
+        var mineIndex = Math.floor(Math.random() * 50);
+        if (mineMap[mineIndex].mine === 0) {
+            mineMap[mineIndex].mine = 1;          
+            minesNum--;
+        }
+    }		
+    var s = ' <div class="box" id="box">';
+	for(var i=0;i<50;i++){
+		
+		if(mineMap[i].mine === 0){
+		s += '<div class="block"></div>';
+		}
+		else
+		{		  
+		 s += '<div class="dilei"></div>';
+	    }
+	}		
+	 s += ' </div>';
+    document.write(s);
+	
+
+
+	
+    </script>
+</body>
+</html>

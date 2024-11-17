@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var tank = {// 坦克对象
+            position: {// 位置坐标
+                XPosition: 0,// x坐标
+                YPosition: 0// y坐标
+            },            
+            BombNum: 2,// 炮弹数          
+            shot: function(){// 发射炮弹
+                console.log("坦克发射炮弹");
+            },
+            move: function(){// 坦克移动
+                console.log("坦克移动");
+            }
+        }
+    
+        for (var key in tank) {         
+            console.log(key+":"+tank[key]);
+        }
+       
+    </script>
+
+</body>
+
+</html>

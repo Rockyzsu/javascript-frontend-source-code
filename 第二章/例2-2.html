@@ -1,0 +1,16 @@
+<html>
+<head>
+    <script type="text/javascript">
+        console.log(1 == "1");// true。字符串"1"先转换为数字1再和1比较
+        console.log(1 === "1");// false。字符串"1"和数字1类型不同
+        console.log(NaN == NaN); // false。NaN不等于任何值
+        console.log(0.1 + 0.2 == 0.3); // false。由于精度问题0.1 + 0.2 不等于0.3
+        console.log(0.1 * 10 + 0.2 * 10 == 0.3 * 10); // true。转换为比较1+2 == 3       
+        console.log(1 == true); // true。布尔型先转换为数字1再比较
+        console.log('21' < '15'); // false。字符串比较是按照每一位的Unicode码进行比较
+        console.log('21' < 15); // false。字符串"21"先转换为数字21再和15比较  
+    </script>
+</head>
+<body>
+</body>
+</html>

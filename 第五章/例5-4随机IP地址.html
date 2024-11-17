@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+/*写一个函数，生成一个随机 IP 地址，一个合法的 IP 地址为 0.0.0.0~255.255.255.255
+*/function random(min,max) {
+        return min + Math.floor(Math.random() * (max - min));
+    };
+    function getRandIP () {
+        var arr = [];
+        for (var i = 0; i < 4; i ++) {
+            arr[i] = random(0,256);
+        }
+        console.log(arr.join('.'));
+    }
+    getRandIP();
+    getRandIP();
+    getRandIP();
+    
+
+</script>
+</body>
+</html>

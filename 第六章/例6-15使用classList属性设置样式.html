@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .p1 {
+            font-size: 15px;
+            width: 300px;          
+            background-color: red;
+        }        
+        .p2 {
+            font-style: italic;                   
+        }
+
+    </style>
+</head>
+<body>
+    <p class="p1">世界大学生运动会是大学生运动员的盛会，也是非常重要的世界综合性运动会。第31届世界大学生夏季运动会将于2022年的6月26日-7月7日在我国四川省成都市举办。
+    </p>
+    <script>   
+        var oP = document.querySelector("p");       
+        oP.classList.add('p2');
+         oP.classList.remove('p1');
+         oP.classList.toggle('p1');
+
+    </script>
+</body>
+
+</html>

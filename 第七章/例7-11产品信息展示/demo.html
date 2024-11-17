@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #box {
+            height: 70px;
+            width: 360px;
+            padding-top: 360px;
+            border: 1px solid black;
+            margin: 100px auto;
+            overflow: hidden;
+            background: url(images/01big.jpg) no-repeat;
+            background-size: 100%;
+        }
+
+        #box ul {
+            overflow: hidden;
+            border-top: 1px solid black;
+        }
+
+        #box li {
+            float: left;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="box">
+        <ul>
+            <li><img src="images/01.jpg" alt="" /></li>
+            <li><img src="images/02.jpg" alt="" /></li>
+            <li><img src="images/03.jpg" alt="" /></li>
+            <li><img src="images/04.jpg" alt="" /></li>
+            <li><img src="images/05.jpg" alt="" /></li>
+        </ul>
+    </div>
+    <script>
+        // var img = document.querySelectorAll('#box ul li img');
+        // var box = document.getElementById('box');
+        // for (var i = 0; i <= img.length; i++) {
+        //     img[i].index = i + 1;
+        //     img[i].onmouseover = function () {
+        //         box.style.backgroundImage = 'url(images/0' + this.index + 'big.jpg)';
+        //     }
+        // }
+        var box = document.getElementById('box');
+        box.addEventListener('mouseover',function (e) {
+            if(e.target.nodeName.toLowerCase()== 'img') 
+            {
+                var s = e.target.getAttribute('src');
+                box.style.backgroundImage='url(images/' + s.substring(7,9) + 'big.jpg)';
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

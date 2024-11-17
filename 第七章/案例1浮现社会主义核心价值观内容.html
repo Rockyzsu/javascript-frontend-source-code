@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abcdefg</title>
+    <style>
+        span {
+            position: absolute;           
+        }
+    </style>
+</head>
+
+<body>
+    
+    <script>
+        var a = ["❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤", "❤自由❤", "❤平等❤", "❤公正❤", "❤法治❤", "❤爱国❤", "❤敬业❤", "❤诚信❤", "❤友善❤"];
+        var i = 0;
+        document.onclick = function(e) {
+            var s = document.createElement("span");
+            s.innerHTML = a[i++ % a.length];
+            s.style.color = "rgb(" + 255 * Math.random() + "," + 255 * Math.random() + "," + 255 * Math.random() + ")";
+            s.style.left = e.clientX + "px";
+            s.style.top = e.clientY + "px";
+            document.body.appendChild(s);
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

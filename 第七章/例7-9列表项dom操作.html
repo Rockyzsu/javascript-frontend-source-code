@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>学生在校时保持安全社交距离，遵守校门管理规定，校内校外不聚集、不扎堆</li>
+        <li>居家防护时，严格遵守防疫规定，尽量减少出门、串门、探亲访友、聚餐聚会</li>
+        <li>集中隔离医学观察时，自觉接受集中隔离医学观察健康监测，配合核酸检测</li>
+        <li>住院就医时，遵守医院管理规定，积极配合医院治疗，坚持适宜锻炼</li>       
+    </ul>
+    <script>
+        var lis = document.querySelectorAll('li');
+        for(var i=0;i<lis.length;i++){
+            lis[i].onclick = function(){
+                this.style.backgroundColor = 'red';
+                this.style.color = 'white';
+            }
+        }       
+        // var ul = document.querySelector('ul');
+        // ul.addEventListener('click', function(e) {           
+        //     e.target.style.backgroundColor = 'red';
+
+
+        // })
+    </script>
+</body>
+
+</html>

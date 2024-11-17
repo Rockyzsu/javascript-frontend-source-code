@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球新冠疫苗实时接种数据</title>
+    <style>
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,
+        th {
+            border: 1px solid #333;
+        }
+
+        thead tr {
+            height: 40px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>地区</th>
+                <th>累计接种(剂)</th>
+                <th>较上日新增(剂)</th>
+                <th>每百人接种(剂)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>中国</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>全球</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var tds = document.querySelectorAll('td'); //获取页面中所有单元格
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.inews.qq.com/newsqa/v1/automation/modules/list?modules=VaccineTopData", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var resData = JSON.parse(xhr.responseText);// 将获取的json数据解析成js对象
+                    console.log(resData);
+                    //第二个单元格的内容设置为中国累计接种数据
+                    tds[1].innerHTML = resData.data.VaccineTopData.中国.total_vaccinations;
+                    //第三个单元格的内容设置为中国较上日新增数据
+                    tds[2].innerHTML = resData.data.VaccineTopData.中国.new_vaccinations;
+                    //第四个单元格的内容设置为中国每百人接种数据
+                    tds[3].innerHTML = resData.data.VaccineTopData.中国.total_vaccinations_per_hundred;
+                    //第六个单元格的内容设置为全球累计接种数据
+                    tds[5].innerHTML = resData.data.VaccineTopData.全球.total_vaccinations;
+                    //第七个单元格的内容设置为全球较上日新增数据
+                    tds[6].innerHTML = resData.data.VaccineTopData.全球.new_vaccinations<0?'-':resData.data.VaccineTopData.全球.new_vaccinations;
+                    //第八个单元格的内容设置为全球每百人接种数据
+                    tds[7].innerHTML = resData.data.VaccineTopData.全球.total_vaccinations_per_hundred;
+                }
+            }
+        xhr.send();
+
+
+    </script>
+</body>
+
+</html>

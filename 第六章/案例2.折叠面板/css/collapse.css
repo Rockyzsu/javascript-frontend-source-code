@@ -1,0 +1,44 @@
+#collapse {
+  width: 50%;
+  margin: 10px auto;
+  list-style-type: none;
+  color: #333;
+}
+
+#collapse h2 {
+  border: 1px solid #0c5087;
+  background:red;
+  font-weight: normal;
+  color: #ffffff;
+  margin: 0;
+  padding: 8px;
+  text-align: center;
+
+}
+
+#collapse h3 {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin: 2px 0 0;
+  padding: .5em .5em .5em .7em;
+  font-size: 100%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border: 1px solid #c5c5c5;
+  background: #f6f6f6;
+  font-weight: normal;
+  color: #454545;
+}
+
+#collapse h3.active {
+  border: 1px solid #0c5087;
+  background: red;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+#collapse div {
+  display: none;
+  padding: 4px;
+}

@@ -1,0 +1,368 @@
+﻿{
+    "ret": 0,
+    "info": "",
+    "data": {
+        "ChinaVaccineTrendData": [
+            {
+                "y": "2022",
+                "date": "04.01",
+                "total_vaccinations": 3270874000,
+                "total_vaccinations_per_hundred": 227.25
+            },
+            {
+                "y": "2022",
+                "date": "04.02",
+                "total_vaccinations": 3274120000,
+                "total_vaccinations_per_hundred": 227.48
+            },
+            {
+                "y": "2022",
+                "date": "04.03",
+                "total_vaccinations": 3276886000,
+                "total_vaccinations_per_hundred": 227.67
+            },
+            {
+                "y": "2022",
+                "date": "04.04",
+                "total_vaccinations": 3279249000,
+                "total_vaccinations_per_hundred": 227.83
+            },
+            {
+                "y": "2022",
+                "date": "04.05",
+                "total_vaccinations": 3281604000,
+                "total_vaccinations_per_hundred": 228
+            },
+            {
+                "y": "2022",
+                "date": "04.06",
+                "total_vaccinations": 3283586000,
+                "total_vaccinations_per_hundred": 228.13
+            },
+            {
+                "y": "2022",
+                "date": "04.07",
+                "total_vaccinations": 3286373000,
+                "total_vaccinations_per_hundred": 228.33
+            },
+            {
+                "y": "2022",
+                "date": "04.08",
+                "total_vaccinations": 3289463000,
+                "total_vaccinations_per_hundred": 228.54
+            },
+            {
+                "y": "2022",
+                "date": "04.09",
+                "total_vaccinations": 3292643000,
+                "total_vaccinations_per_hundred": 228.76
+            },
+            {
+                "y": "2022",
+                "date": "04.10",
+                "total_vaccinations": 3295208000,
+                "total_vaccinations_per_hundred": 228.94
+            },
+            {
+                "y": "2022",
+                "date": "04.11",
+                "total_vaccinations": 3297551000,
+                "total_vaccinations_per_hundred": 229.1
+            },
+            {
+                "y": "2022",
+                "date": "04.12",
+                "total_vaccinations": 3300328000,
+                "total_vaccinations_per_hundred": 229.3
+            },
+            {
+                "y": "2022",
+                "date": "04.13",
+                "total_vaccinations": 3303126000,
+                "total_vaccinations_per_hundred": 229.49
+            },
+            {
+                "y": "2022",
+                "date": "04.14",
+                "total_vaccinations": 3305884000,
+                "total_vaccinations_per_hundred": 229.68
+            },
+            {
+                "y": "2022",
+                "date": "04.15",
+                "total_vaccinations": 3308616000,
+                "total_vaccinations_per_hundred": 229.87
+            },
+            {
+                "y": "2022",
+                "date": "04.16",
+                "total_vaccinations": 3311245000,
+                "total_vaccinations_per_hundred": 230.05
+            },
+            {
+                "y": "2022",
+                "date": "04.17",
+                "total_vaccinations": 3313338000,
+                "total_vaccinations_per_hundred": 230.2
+            },
+            {
+                "y": "2022",
+                "date": "04.18",
+                "total_vaccinations": 3315186000,
+                "total_vaccinations_per_hundred": 230.3
+            },
+            {
+                "y": "2022",
+                "date": "04.19",
+                "total_vaccinations": 3317463000,
+                "total_vaccinations_per_hundred": 230.49
+            },
+            {
+                "y": "2022",
+                "date": "04.20",
+                "total_vaccinations": 3319950000,
+                "total_vaccinations_per_hundred": 230.66
+            },
+            {
+                "y": "2022",
+                "date": "04.21",
+                "total_vaccinations": 3322488000,
+                "total_vaccinations_per_hundred": 230.84
+            },
+            {
+                "y": "2022",
+                "date": "04.22",
+                "total_vaccinations": 3325049000,
+                "total_vaccinations_per_hundred": 231.01
+            },
+            {
+                "y": "2022",
+                "date": "04.23",
+                "total_vaccinations": 3327616000,
+                "total_vaccinations_per_hundred": 231.19
+            },
+            {
+                "y": "2022",
+                "date": "04.24",
+                "total_vaccinations": 3329766000,
+                "total_vaccinations_per_hundred": 231.34
+            },
+            {
+                "y": "2022",
+                "date": "04.25",
+                "total_vaccinations": 3331771000,
+                "total_vaccinations_per_hundred": 231.48
+            },
+            {
+                "y": "2022",
+                "date": "04.26",
+                "total_vaccinations": 3334018000,
+                "total_vaccinations_per_hundred": 231.8
+            },
+            {
+                "y": "2022",
+                "date": "04.27",
+                "total_vaccinations": 3336285000,
+                "total_vaccinations_per_hundred": 231.64
+            },
+            {
+                "y": "2022",
+                "date": "04.28",
+                "total_vaccinations": 3340711000,
+                "total_vaccinations_per_hundred": 231.32
+            },
+            {
+                "y": "2022",
+                "date": "04.29",
+                "total_vaccinations": 3340711000,
+                "total_vaccinations_per_hundred": 232.1
+            },
+            {
+                "y": "2022",
+                "date": "04.30",
+                "total_vaccinations": 3343008000,
+                "total_vaccinations_per_hundred": 232.2
+            },
+            {
+                "y": "2022",
+                "date": "05.01",
+                "total_vaccinations": 3344528000,
+                "total_vaccinations_per_hundred": 232.37
+            },
+            {
+                "y": "2022",
+                "date": "05.02",
+                "total_vaccinations": 3345524000,
+                "total_vaccinations_per_hundred": 232.44
+            },
+            {
+                "y": "2022",
+                "date": "05.03",
+                "total_vaccinations": 3346607000,
+                "total_vaccinations_per_hundred": 232.47
+            },
+            {
+                "y": "2022",
+                "date": "05.04",
+                "total_vaccinations": 3347640000,
+                "total_vaccinations_per_hundred": 232.58
+            },
+            {
+                "y": "2022",
+                "date": "05.05",
+                "total_vaccinations": 3348588000,
+                "total_vaccinations_per_hundred": 232.65
+            },
+            {
+                "y": "2022",
+                "date": "05.06",
+                "total_vaccinations": 3349702000,
+                "total_vaccinations_per_hundred": 232.73
+            },
+            {
+                "y": "2022",
+                "date": "05.07",
+                "total_vaccinations": 3350934000,
+                "total_vaccinations_per_hundred": 232.81
+            },
+            {
+                "y": "2022",
+                "date": "05.08",
+                "total_vaccinations": 3352053000,
+                "total_vaccinations_per_hundred": 232.89
+            },
+            {
+                "y": "2022",
+                "date": "05.09",
+                "total_vaccinations": 3353022000,
+                "total_vaccinations_per_hundred": 232.96
+            },
+            {
+                "y": "2022",
+                "date": "05.10",
+                "total_vaccinations": 3354196000,
+                "total_vaccinations_per_hundred": 233.04
+            },
+            {
+                "y": "2022",
+                "date": "05.11",
+                "total_vaccinations": 3355535000,
+                "total_vaccinations_per_hundred": 233.13
+            },
+            {
+                "y": "2022",
+                "date": "05.12",
+                "total_vaccinations": 3357120000,
+                "total_vaccinations_per_hundred": 233.24
+            },
+            {
+                "y": "2022",
+                "date": "05.13",
+                "total_vaccinations": 3358576000,
+                "total_vaccinations_per_hundred": 233.36
+            },
+            {
+                "y": "2022",
+                "date": "05.14",
+                "total_vaccinations": 3360050000,
+                "total_vaccinations_per_hundred": 233.45
+            },
+            {
+                "y": "2022",
+                "date": "05.15",
+                "total_vaccinations": 3361333000,
+                "total_vaccinations_per_hundred": 233.54
+            },
+            {
+                "y": "2022",
+                "date": "05.16",
+                "total_vaccinations": 3362389000,
+                "total_vaccinations_per_hundred": 233.61
+            },
+            {
+                "y": "2022",
+                "date": "05.17",
+                "total_vaccinations": 3364987000,
+                "total_vaccinations_per_hundred": 233.79
+            },
+            {
+                "y": "2022",
+                "date": "05.18",
+                "total_vaccinations": 3366402000,
+                "total_vaccinations_per_hundred": 233.89
+            },
+            {
+                "y": "2022",
+                "date": "05.19",
+                "total_vaccinations": 3367720000,
+                "total_vaccinations_per_hundred": 233.98
+            },
+            {
+                "y": "2022",
+                "date": "05.20",
+                "total_vaccinations": 3369057000,
+                "total_vaccinations_per_hundred": 234.07
+            },
+            {
+                "y": "2022",
+                "date": "05.21",
+                "total_vaccinations": 3369057000,
+                "total_vaccinations_per_hundred": 234.07
+            },
+            {
+                "y": "2022",
+                "date": "05.22",
+                "total_vaccinations": 3370162000,
+                "total_vaccinations_per_hundred": 234.15
+            },
+            {
+                "y": "2022",
+                "date": "05.23",
+                "total_vaccinations": 3371096000,
+                "total_vaccinations_per_hundred": 234.21
+            },
+            {
+                "y": "2022",
+                "date": "05.24",
+                "total_vaccinations": 3372243000,
+                "total_vaccinations_per_hundred": 234.29
+            },
+            {
+                "y": "2022",
+                "date": "05.25",
+                "total_vaccinations": 3373460000,
+                "total_vaccinations_per_hundred": 234.38
+            },
+            {
+                "y": "2022",
+                "date": "05.26",
+                "total_vaccinations": 3374726000,
+                "total_vaccinations_per_hundred": 234.47
+            },
+            {
+                "y": "2022",
+                "date": "05.27",
+                "total_vaccinations": 3375898000,
+                "total_vaccinations_per_hundred": 234.55
+            },
+            {
+                "y": "2022",
+                "date": "05.28",
+                "total_vaccinations": 3377153000,
+                "total_vaccinations_per_hundred": 234.63
+            },
+            {
+                "y": "2022",
+                "date": "05.29",
+                "total_vaccinations": 3378211000,
+                "total_vaccinations_per_hundred": 234.71
+            },
+            {
+                "y": "2022",
+                "date": "05.30",
+                "total_vaccinations": 3379075000,
+                "total_vaccinations_per_hundred": 234.77
+            }
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style=" background-color: red;"></div>
+    <script>
+        var div = document.querySelector('div');
+        console.log(div.style.backgroundColor);
+        console.log(div.style.width);// 输出：null
+        console.log(window.getComputedStyle(div).width);
+    </script>
+</body>
+
+</html>

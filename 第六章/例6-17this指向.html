@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button></button>
+    <script>       
+        function f() {
+            console.log(this);
+        }
+        f();
+        var btn = document.querySelector('button');
+        btn.onclick = function () {
+            console.log(this);
+
+        }
+    </script>
+</body>
+
+</html>

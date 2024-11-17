@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>keydown事件及箭头的使用</title>
+	<style>
+		#div1 {
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: absolute;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id='div1'></div>
+	<script>
+		var oDiv = document.getElementById('div1');
+		document.onkeydown = function (ev) {		
+			switch (ev.keyCode) {//判断按键的代码值
+				case 37: //按下向左键
+					oDiv.style.left = oDiv.offsetLeft - 10 + 'px';
+					break;
+				case 38: //按下向上键
+					oDiv.style.top = oDiv.offsetTop - 10 + 'px';
+					break;
+				case 39: //按下向右键
+					oDiv.style.left = oDiv.offsetLeft + 10 + 'px';
+					break;
+				case 40://按下向下键
+					oDiv.style.top = oDiv.offsetTop + 10 + 'px';
+					break;
+			}
+		};
+	</script>
+</body>
+
+</html>

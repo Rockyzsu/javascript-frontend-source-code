@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            color: #999;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="JavaScript前端开发与实例教程">
+    <script>        
+        var text = document.querySelector('input');       
+        text.onfocus = function() {
+                if (this.value === 'JavaScript前端开发与实例教程') {
+                    this.value = '';
+                }               
+                this.style.color = '#333';
+            }         
+        text.onblur = function() {       
+            if (this.value === '') {
+                this.value = 'JavaScript前端开发与实例教程';
+            }         
+            this.style.color = '#999';
+        }
+    </script>
+
+</body>
+
+</html>

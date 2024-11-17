@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取全国疫情实时追踪数据</title>
+    <style>
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,
+        th {
+            border: 1px solid #333;
+        }
+
+        thead tr {
+            height: 40px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>本土现有确诊</th>
+                <th>现有确诊</th>
+                <th>累计确诊</th>
+                <th>无症状感染者</th>
+                <th>境外输入</th>
+                <th>累计死亡</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="6"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="js/jquery.min.js"></script>
+    <!--引入jquery框架-->
+    <script>
+        var tds = document.querySelectorAll('td');
+
+        $.ajax({
+            url: '动手实践：获取全国疫情实时追踪数据.json',
+            data: {
+                modules: 'localCityNCOVDataList,diseaseh5Shelf'
+            },       
+           
+            success: function (res) {     
+                console.log(typeof res);
+                console.log(res);
+                tds[0].innerHTML = res.data.diseaseh5Shelf.chinaTotal.localConfirm;
+                tds[1].innerHTML = res.data.diseaseh5Shelf.chinaTotal.nowConfirm;
+                tds[2].innerHTML = res.data.diseaseh5Shelf.chinaTotal.confirm;
+                tds[3].innerHTML = res.data.diseaseh5Shelf.chinaTotal.noInfect;
+                tds[4].innerHTML = res.data.diseaseh5Shelf.chinaTotal.importedCase;
+                tds[5].innerHTML = res.data.diseaseh5Shelf.chinaTotal.dead;
+                tds[6].innerHTML = "统计截至" + res.data.diseaseh5Shelf.lastUpdateTime;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>疫情中高风险地区名单</title>
+</head>
+<body>
+    <script>
+        var name = 'jsonp' + Math.random().toString().replace('.', '');
+        window[name] = function(data){
+            console.log(typeof data);
+            console.log(data);
+        };
+        var script = document.createElement('script');
+        var attr = document.createAttribute('src');
+        attr.value = 'https://eyesight.news.qq.com/sars/riskarea' + '?callback=' + name;
+        script.setAttributeNode(attr);
+        document.body.appendChild(script);
+    </script>
+</body>
+</html>

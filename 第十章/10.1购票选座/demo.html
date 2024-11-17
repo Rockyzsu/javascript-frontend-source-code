@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+
+<head>
+  <title>选座一网打尽好电影</title>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="1.css" />
+  <link rel="stylesheet" href="2.css" />
+
+  <style>
+    @font-face {
+      font-family: stonefont;
+      src: url('ad006ffb585cd3a6929608352c125aa83448.eot');
+      src: url('ad006ffb585cd3a6929608352c125aa83448.eot?#iefix') format('embedded-opentype'),
+        url('33a5e7d47762ff28039916f65316048c2288.woff') format('woff');
+    }
+
+    .stonefont {
+      font-family: stonefont;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="header">
+    <div class="header-inner">
+      <a href="#" class="logo" data-act="icon-click">电影</a>
+      <div class="city-container" data-val="{currentcityid:247 }">
+        <div class="city-selected">
+          <div class="city-name">
+
+            <span class="caret"></span>
+          </div>
+        </div>
+        <div class="city-list" data-val="{ localcityid: 247 }">
+          <div class="city-list-header">定位城市：<a class="js-geo-city" data-ci="247"></a></div>
+        </div>
+      </div>
+
+
+      <div class="nav">
+        <ul class="navbar">
+          <li><a href="/" data-act="home-click">首页</a></li>
+          <li><a href="/films" data-act="movies-click">电影</a></li>
+          <li><a href="/cinemas" data-act="cinemas-click">影院</a></li>
+          <li><a href="http://www.gewara.com">演出</a></li>
+
+          <li><a href="/board" data-act="board-click">榜单</a></li>
+          <li><a href="/news" data-act="hotNews-click">热点</a></li>
+          <li><a href="/edimall">商城</a></li>
+        </ul>
+      </div>
+
+      <div class="user-info">
+        <div class="user-avatar has-login">
+          <img src="https://img.meituan.net/maoyanuser/23f19f4cdfe538bdf85f0ccd863346639437.png">
+          <span class="caret"></span>
+          <ul class="user-menu yes-login-menu">
+            <li class="text"><a href="/profile/orders">我的订单</a></li>
+            <li class="text login-name" title="cuizhongyuanzk"><a href="javascript:void 0">基本信息</a></li>
+            <li class="text"><a href="javascript:void 0" class="J-logout" data-act="logout-click">退出登录</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <form action="/query" target="_blank" class="search-form" data-actform="search-click">
+        <input name="kw" class="search" type="search" maxlength="32" placeholder="找影视剧、影人、影院" autocomplete="off">
+        <input class="submit" type="submit" value="">
+      </form>
+
+      <div class="app-download">
+        <a href="/app" target="_blank">
+          <span class="iphone-icon"></span>
+          <span class="apptext">APP下载</span>
+          <span class="caret"></span>
+          <div class="download-icon">
+            <p class="down-title">扫码下载APP</p>
+            <p class='down-content'>选座更优惠</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+  <div class="header-placeholder"></div>
+
+
+  <div class="container" id="app" class="page-cinemas/seat">
+    <div class="order-progress-bar">
+      <div class="step first done">
+        <span class="step-num">1</span>
+        <div class="bar"></div>
+        <span class="step-text">选择影片场次</span>
+      </div>
+      <div class="step done">
+        <span class="step-num">2</span>
+        <div class="bar"></div>
+        <span class="step-text">选择座位</span>
+      </div>
+      <div class="step ">
+        <span class="step-num">3</span>
+        <div class="bar"></div>
+        <span class="step-text">14分钟内付款</span>
+      </div>
+      <div class="step last ">
+        <span class="step-num">4</span>
+        <div class="bar"></div>
+        <span class="step-text">影院取票观影</span>
+      </div>
+    </div>
+
+
+    <div class="main clearfix">
+      <div class="hall">
+        <div class="seat-example">
+          <div class="selectable-example example">
+            <span>可选座位</span>
+          </div>
+          <div class="sold-example example">
+            <span>已售座位</span>
+          </div>
+          <div class="selected-example example">
+            <span>已选座位</span>
+          </div>
+          <div class="couple-example example">
+            <span>情侣座位</span>
+          </div>
+        </div>
+
+
+        <div class="seats-block" data-cols="10" data-section-id="1" data-section-name="普通"
+          data-seq-no="202112290660684">
+          <div class="row-id-container">
+            <span class="row-id">1</span>
+            <span class="row-id">2</span>
+            <span class="row-id">3</span>
+            <span class="row-id">4</span>
+            <span class="row-id">5</span>
+            <span class="row-id">6</span>
+            <span class="row-id">7</span>
+            <span class="row-id">8</span>
+          </div>
+
+          <div class="seats-container">
+            <div class="screen-container">
+              <div class="screen">银幕中央</div>
+              <div class="c-screen-line"></div>
+            </div>
+
+            <div class="seats-wrapper">
+              <div class="row">
+                <span class="seat selectable" data-column-id="10" data-row-id="1"></span>
+                <span class="seat selectable" data-column-id="9" data-row-id="1"></span>
+                <span class="seat selectable" data-column-id="8" data-row-id="1"></span>
+                <span class="seat selectable" data-column-id="7" data-row-id="1"></span>
+                <span class="seat selectable" data-column-id="6" data-row-id="1"></span>
+                <span class="seat selectable" data-column-id="5" data-row-id="1"></span>
+                <span class="seat selectable" data-column-id="4" data-row-id="1"></span>
+                <span class="seat selectable" data-column-id="3" data-row-id="1"></span>
+                <span class="seat selectable" data-column-id="2" data-row-id="1"></span>
+                <span class="seat selectable" data-column-id="1" data-row-id="1"></span>
+              </div>
+              <div class="row">
+                <span class="seat selectable" data-column-id="9" data-row-id="2"></span>
+                <span class="seat selectable" data-column-id="8" data-row-id="2"></span>
+                <span class="seat selectable" data-column-id="7" data-row-id="2"></span>
+                <span class="seat selectable" data-column-id="6" data-row-id="2"></span>
+                <span class="seat selectable" data-column-id="5" data-row-id="2"></span>
+                <span class="seat selectable" data-column-id="4" data-row-id="2"></span>
+                <span class="seat selectable" data-column-id="3" data-row-id="2"></span>
+                <span class="seat selectable" data-column-id="2" data-row-id="2"></span>
+                <span class="seat selectable" data-column-id="1" data-row-id="2"></span>
+                <span class="seat empty" data-column-id="" data-row-id="2" data-st="E"></span>
+
+              </div>
+              <div class="row">
+                <span class="seat selectable" data-column-id="7" data-row-id="3"></span>
+                <span class="seat selectable" data-column-id="6" data-row-id="3"></span>
+                <span class="seat selectable" data-column-id="5" data-row-id="3"></span>
+                <span class="seat selectable" data-column-id="4" data-row-id="3"></span>
+                <span class="seat selectable" data-column-id="3" data-row-id="3"></span>
+                <span class="seat selectable" data-column-id="2" data-row-id="3"></span>
+                <span class="seat selectable" data-column-id="1" data-row-id="3"></span>
+                <span class="seat empty" data-column-id="" data-row-id="3" data-st="E"> </span>
+                <span class="seat empty" data-column-id="" data-row-id="3" data-st="E"> </span>
+                <span class="seat empty" data-column-id="" data-row-id="3" data-st="E"> </span>
+              </div>
+              <div class="row">
+                <span class="seat selectable" data-column-id="7" data-row-id="4" data-no="4116030106#04#07"></span>
+                </span>
+                <span class="seat selectable" data-column-id="6" data-row-id="4" data-no="4116030106#04#06"></span>
+                </span>
+                <span class="seat selectable" data-column-id="5" data-row-id="4" data-no="4116030106#04#05"></span>
+                <span class="seat selectable" data-column-id="4" data-row-id="4" data-no="4116030106#04#04"></span>
+                </span>
+                <span class="seat selectable" data-column-id="3" data-row-id="4" data-no="4116030106#04#03">
+                </span>
+                <span class="seat selectable" data-column-id="2" data-row-id="4" data-no="4116030106#04#02"></span>
+
+                <span class="seat selectable" data-column-id="1" data-row-id="4" data-no="4116030106#04#01"></span>
+
+                <span class="seat empty" data-column-id="" data-row-id="4" data-no="" data-st="E"></span>
+                <span class="seat empty" data-column-id="" data-row-id="4" data-no="" data-st="E"></span>
+                <span class="seat empty" data-column-id="" data-row-id="4" data-no="" data-st="E"></span>
+
+              </div>
+              <div class="row">
+                <span class="seat selectable" data-column-id="7" data-row-id="5" data-no="4116030106#05#07"></span>
+                <span class="seat selectable" data-column-id="6" data-row-id="5" data-no="4116030106#05#06"></span>
+                <span class="seat selectable" data-column-id="5" data-row-id="5" data-no="4116030106#05#05"></span>
+                <span class="seat selectable" data-column-id="4" data-row-id="5" data-no="4116030106#05#04"></span>
+                <span class="seat selectable" data-column-id="3" data-row-id="5" data-no="4116030106#05#03">
+                </span>
+                <span class="seat selectable" data-column-id="2" data-row-id="5" data-no="4116030106#05#02">
+                </span>
+                <span class="seat selectable" data-column-id="1" data-row-id="5" data-no="4116030106#05#01">
+                </span>
+                <span class="seat empty" data-column-id="" data-row-id="5" data-no="" data-st="E"> </span>
+                <span class="seat empty" data-column-id="" data-row-id="5" data-no="" data-st="E"> </span>
+                <span class="seat empty" data-column-id="" data-row-id="5" data-no="" data-st="E"></span>
+
+              </div>
+              <div class="row">
+                <span class="seat selectable" data-column-id="7" data-row-id="6" data-no="4116030106#06#07"></span>
+                <span class="seat selectable" data-column-id="6" data-row-id="6" data-no="4116030106#06#06"> </span>
+                <span class="seat selectable" data-column-id="5" data-row-id="6" data-no="4116030106#06#05"></span>
+                <span class="seat selectable" data-column-id="4" data-row-id="6" data-no="4116030106#06#04">
+                </span>
+                <span class="seat selectable" data-column-id="3" data-row-id="6" data-no="4116030106#06#03">
+                </span>
+                <span class="seat selectable" data-column-id="2" data-row-id="6" data-no="4116030106#06#02">
+                </span>
+                <span class="seat selectable" data-column-id="1" data-row-id="6" data-no="4116030106#06#01">
+                </span>
+                <span class="seat empty" data-column-id="" data-row-id="6" data-no="" data-st="E"> </span>
+                <span class="seat empty" data-column-id="" data-row-id="6" data-no="" data-st="E"> </span>
+                <span class="seat empty" data-column-id="" data-row-id="6" data-no="" data-st="E">
+                </span>
+              </div>
+              <div class="row">
+                <span class="seat selectable" data-column-id="9" data-row-id="7"> </span>
+                <span class="seat selectable" data-column-id="8" data-row-id="7"> </span>
+                <span class="seat selectable" data-column-id="7" data-row-id="7"> </span>
+                <span class="seat selectable" data-column-id="6" data-row-id="7"> </span>
+                <span class="seat selectable" data-column-id="5" data-row-id="7"> </span>
+                <span class="seat selectable" data-column-id="4" data-row-id="7"> </span>
+                <span class="seat selectable" data-column-id="3" data-row-id="7"> </span>
+                <span class="seat empty" data-column-id="" data-row-id="7" data-st="E"> </span>
+                <span class="seat sold" data-column-id="2" data-row-id="7" data-st="LK"> </span>
+                <span class="seat sold" data-column-id="1" data-row-id="7" data-st="LK"> </span>
+              </div>
+              <div class="row">
+                <span class="seat selectable" data-column-id="10" data-row-id="8" data-no="4116030106#08#10"></span>
+                <span class="seat selectable" data-column-id="9" data-row-id="8" data-no="4116030106#08#09"></span>
+                <span class="seat selectable" data-column-id="8" data-row-id="8" data-no="4116030106#08#08"></span>
+                <span class="seat selectable" data-column-id="7" data-row-id="8" data-no="4116030106#08#07"> </span>
+                <span class="seat selectable" data-column-id="6" data-row-id="8" data-no="4116030106#08#06">
+                </span>
+                <span class="seat selectable" data-column-id="5" data-row-id="8" data-no="4116030106#08#05">
+                </span>
+                <span class="seat selectable" data-column-id="4" data-row-id="8" data-no="4116030106#08#04">
+                </span>
+                <span class="seat selectable" data-column-id="3" data-row-id="8" data-no="4116030106#08#03"></span>
+                <span class="seat selectable" data-column-id="2" data-row-id="8" data-no="4116030106#08#02"></span>
+                <span class="seat selectable" data-column-id="1" data-row-id="8" data-no="4116030106#08#01"> </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="side">
+        <div class="movie-info clearfix">
+          <div class="poster">
+            <img src="https://p0.meituan.net/movie/0e81560dc9910a6a658a82ec7a054ceb5075992.jpg@115w_158h_1e_1c">
+          </div>
+          <div class="content">
+            <p class="name text-ellipsis">长津湖</p>
+            <div class="info-item">
+              <span>类型 :</span>
+              <span class="value">剧情,历史,战争</span>
+            </div>
+            <div class="info-item">
+              <span>时长 :</span>
+              <span class="value">176分钟</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="show-info">
+          <div class="info-item">
+            <span>影院 :</span>
+            <span class="value text-ellipsis">影城</span>
+          </div>
+          <div class="info-item">
+            <span>影厅 :</span>
+            <span class="value text-ellipsis">影厅</span>
+          </div>
+          <div class="info-item">
+            <span>版本 :</span>
+            <span class="value text-ellipsis">国语2D</span>
+          </div>
+          <div class="info-item">
+            <span>场次 :</span>
+            <span class="value text-ellipsis screen">今天 12月29 18:05</span>
+          </div>
+          <div class="info-item">
+            <span>票价 :</span>
+            <span class="value text-ellipsis">￥30/张</span>
+
+          </div>
+        </div>
+
+        <div class="ticket-info">
+          <div class="no-ticket">
+            <p class="buy-limit">座位：一次最多选5个座位</p>
+            <p class="no-selected">请<span>点击左侧</span>座位图选择座位</p>
+          </div>
+          <div class="has-ticket" style="display:none">
+            <span class="text">座位：</span>
+            <div class="ticket-container" data-limit="5"></div>
+          </div>
+
+          <div class="total-price">
+            <span>总价 :</span>
+            <span class="price">0</span>
+          </div>
+        </div>
+
+        <div class="confirm-order">
+          <div class="cellphone">
+            <span>手机号 :</span>
+            <span class="phone-num">188****8888</span>
+          </div>
+          <div class="confirm-btn disable" data-act="confirm-click" data-bid="b_0a0ep6pp">确认选座</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="modal-container" style="display:none">
+      <div class="modal">
+        <span class="icon"></span>
+
+        <p class="tip"></p>
+
+        <div class="ok-btn btn">我知道了</div>
+      </div>
+    </div>
+
+  </div>
+
+
+  </div>
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>

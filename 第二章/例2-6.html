@@ -1,0 +1,20 @@
+<html>
+<head>
+    <script type="text/javascript">
+        // 根据优先级，先执行乘法在算加法
+        console.log(1 + 5 * 2 );  
+        // 根据优先级，先执行小括号里的1+5再和2相乘
+        console.log((1 + 5) * 2 ); 
+        // 根据优先级，先执行 3 > 5，再执行&&运算
+        console.log(3 > 5 && 2 < 7);  
+        // 根据优先级，先执行严格相等比较再赋值
+        var c = 2 === "2";
+        console.log(c);
+        // 根据优先级，先执行取反，再执行&&运算，最后执行||运算
+        var d = !2 || 3 && 1;
+        console.log(d);
+    </script>
+</head>
+<body>
+</body>
+</html>

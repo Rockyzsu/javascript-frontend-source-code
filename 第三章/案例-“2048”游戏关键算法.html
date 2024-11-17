@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        2048游戏核心算法实现：通过一个数组得到另一个数组。
+
+        需求描述：
+        -如果遇见0则跳过和下一位比较。
+        -数组数据是以2为基数的任意数值，例如，0,2,4,8,16,32，64,128等。。。。，
+        -长度是4
+        -数组从0号元素开始，相邻两个数两两比较， 若一致则相加的结果放入新数组，从下一个没参与的数继续开始比较。
+        如果不一致，将当前值放入新数组，从下一个没参与的数继续开始继续比较。
+        -新数组不够4位，则补0.
+
+示例：
+   
+     [2,2,2,2] => [4,4,0,0]
+     [2,0,2,2] => [4,2,0,0]
+     [2,4,2,2] => [2,4,4,0]
+     [2,4,4,2] => [2,8,2,0]
+     [0,2,0,2] => [4,0,0,0]    
+                */
+        var arr = [0,2,0,2];
+        var newArr = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                // 判断j的值是不是0
+                for (var j = i + 1; j < arr.length; j++) {
+                    if (arr[j] != 0) break;
+                }
+                if (arr[i] != arr[j]) {
+                    newArr.push(arr[i]);
+                } else {
+                    newArr.push(arr[i] + arr[j]);
+                    i = j;
+                }
+            }
+        }
+        if (newArr.length < 4) {
+            for (var i = 0; i < arr.length; i++) {
+                if (!newArr[i]) newArr[i] = 0;
+            }
+        }
+        console.log(newArr);
+
+    </script>
+</body>
+
+</html>

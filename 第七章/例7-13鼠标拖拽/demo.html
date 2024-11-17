@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>鼠标拖拽</title>
+<style>
+	#div1{width:215px;height:75px;background-image: url(1.png); position:absolute;left:0;top:70px}
+</style>
+
+<body>
+
+	<div id='div1'></div>
+	<script>		
+			var oDiv = document.getElementById('div1');
+			oDiv.onmousedown = function(ev){				
+				var disX = ev.clientX - this.offsetLeft;
+				var disY = ev.clientY - this.offsetTop; 
+				document.onmousemove = function(ev){				
+					oDiv.style.left = ev.clientX - disX + 'px';
+					oDiv.style.top = ev.clientY - disY + 'px';
+				};
+				document.onmouseup = function(){
+					document.onmousemove = null;
+				};
+				return false;//标准浏览器下的默认行为取消方法
+			};		
+	</script>
+</body>
+</html>

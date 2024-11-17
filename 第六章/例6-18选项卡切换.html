@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            border: 0;
+        }
+
+        #tab div {
+            width: 210px;
+            height: 50px;
+            border: 1px #000 solid;
+            padding: 10px;
+            display: none;
+        }
+
+        #tab div.show {
+            display: block;
+        }
+
+        #tab input.current {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tab">
+        <input class="current" type="button" value="商品介绍">
+        <input type="button" value="规格与包装">
+        <input type="button" value="售后保障">
+        <div class="show">商品介绍模块内容</div>
+        <div>规格与包装模块内容</div>
+        <div>售后保障模块内容</div>
+    </div>
+    <script>
+        var inputs = document.querySelectorAll('input');
+        var divs = document.querySelectorAll('#tab div');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].index = i;
+            inputs[i].onclick = function () {
+                for (var i = 0; i < inputs.length; i++) {
+                    inputs[i].className = '';
+                    divs[i].className = '';
+                }
+                this.className = 'current';
+                divs[this.index].className = 'show';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+   <title></title> 
+</head> 
+<body > 
+ <script> 
+ var str = "i-love-you";
+ var arr = str.split('-');// ['i','love','you']
+       for (var i = 1; i < arr.length; i++) {
+           arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substring(1);
+       }
+console.log(arr.join(''));
+
+
+    
+</script> 
+</body> 
+</html>

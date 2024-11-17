@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="ad.jpg"  width="25%" class="ad"><br>
+    <button>取消定时隐藏</button>
+    <script>
+        var ad = document.querySelector('.ad');
+        var btn = document.querySelector('button');
+        var t = setTimeout(function () {
+            ad.style.display = 'none';
+        }, 5000);
+        btn.onclick = function () {
+            clearTimeout(t);
+        }
+    </script>
+</body>
+
+</html>

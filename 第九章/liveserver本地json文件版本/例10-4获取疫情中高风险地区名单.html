@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球新冠疫苗实时接种数据</title>
+    <style>
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,
+        th {
+            border: 1px solid #333;
+        }
+
+        thead tr {
+            height: 40px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <script>
+    
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "疫情中高风险地区名单.json", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    console.log(xhr.responseText);
+                    var resData = JSON.parse(xhr.responseText);// 将获取的json数据解析成js对象
+                    console.log(resData);
+                    
+                }
+            }
+        xhr.send();
+
+
+    </script>
+</body>
+
+</html>

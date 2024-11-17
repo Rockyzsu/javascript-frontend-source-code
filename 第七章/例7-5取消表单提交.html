@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <form action="1.html">
+        用户名：<input type="text" id="userName">
+        <input type="submit" value="提交" id="sub">
+    </form>
+    <script>
+        var btn = document.querySelector('#sub');
+        // btn.onclick = function (e) {
+        //     var userName = document.querySelector('#userName');
+        //     if (userName.value.length == 0) {
+        //         alert("请输入用户名！");
+        //         return false;
+        //     }
+        // }
+        btn.addEventListener('click',function(ev){
+            var userName = document.querySelector('#userName');
+            if (userName.value.length == 0) {
+                alert("请输入用户名！");
+                ev.preventDefault();
+            }
+        })
+       
+    </script>
+</body>
+
+</html>

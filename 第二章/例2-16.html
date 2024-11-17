@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <script type="text/javascript">
+
+//素数：一个大于1的自然数，除了1和它自身之外，不能整除其他自然数
+var num = 89;
+var flag = true;
+for(var i=2;i<num;i++){
+  if(num % i ==0){
+    flag = false;
+    break;
+  }
+}
+if(flag){
+  console.log('该数字是素数');
+}else{
+  console.log('该数字不是素数');
+}
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

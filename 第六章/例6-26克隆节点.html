@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>0</li>
+    </ul>
+    <script>
+        // 1. 创建元素节点
+
+        var ul = document.querySelector('ul');
+        var li1 = ul.children[0].cloneNode(true);
+        ul.appendChild(li1);
+        var li2 = ul.children[0].cloneNode();
+        ul.appendChild(li2);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>限时秒杀</title>
+    <style>
+      .box{margin:0 auto;position:relative;background:url(2.jpg);
+        background-size: 100%;
+        width:702px;height: 180px;}
+      #s{float:left;width:702px;height:50px;border:1px solid #ccc;line-height:50px;text-align: center;color:black;position:relative;top:190px;font-size: 30px;}
+      
+    </style>
+  </head>
+  <body>
+    <div class="box">      
+      <div id="s"></div>        <!-- 剩余的秒数 -->
+    </div>
+    <script>        
+      // 设置据当前时间开始，秒杀的结束时间
+      var endtime = new Date(), endseconds = endtime.getTime() + 60 * 1000;
+      // 声明变量保存剩余的时间
+      var s = 0;
+      // 设置定时器，实现限时秒杀效果
+      var id = setInterval(function () {
+        var nowtime = new Date();    // 获取当前时间
+        // 获取时间差，单位秒
+        var remaining = parseInt((endseconds - nowtime.getTime()) / 1000);
+        // 判断秒杀是否过期
+        if (remaining > 0) {       
+          s = parseInt(remaining % 60);           // 计算剩余秒（与60取模，获取剩余的秒数）
+          s = s < 10 ? '0' + s : s;
+        } else {
+          clearInterval(id);         // 秒杀过期，取消定时器
+          s = '00';
+        }       
+        document.getElementById('s').innerHTML = '距离本场秒杀结束还剩：'+ s + '秒';
+      }, 1000);
+      
+    </script>
+  </body>
+</html>

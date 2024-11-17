@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /*
+        题目名称：“三天打鱼两天晒网” 
+        二．题目内容：中国有句俗语叫“三天打鱼两天晒网”。
+        中国有句俗语叫“三天打渔两天晒网”。若某渔夫从当年1月1日起开始“三天打渔两天晒网”，编程实现输入当年的某一天，输出该渔夫是在“打渔”还是在“晒网”。
+ 
+      实现过程：
+     (1) 自定义函数 leap()，用来判断输入的年份是否是闰年。
+ 
+     (2) 自定义函数 getDays()，用来计算输入日期是第几天。
+ 
+     (3) 调用上面两个函数。
+        */
+        function isLeap(year) {
+            if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+                return true;
+            }
+            return false;
+        }
+        function getDays(year, month, day) {
+            var arr = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];//月份
+            for (var i = 0; i < month - 1; i++) {// for循环让前面月份天数相加。
+                day += arr[i];
+            }
+            if (isLeap(year) && month > 2) {//判断如果是闰年就加一天
+                day++;
+            }
+            return day;
+        }
+        var year = prompt("请输入年");
+        var month = prompt("请输入月");
+        var day = prompt("请输入日");
+        var n = getDays(year, month, day);    /*调用函数 */
+        if ((n % 5) < 4 && (n % 5) > 0)    /*余数是1或2或3时说明在打渔，否则在晒网*/
+            alert(year + "年" + month + "月" + day + "日渔夫在打渔");
+        else
+            alert(year + "年" + month + "月" + day + "日渔夫在晒网");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <style>
+        small,
+        textarea {
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="" id="test">
+        姓名：<input type="text" id="username">        
+        <br>
+        <input type="submit">
+        <input type="reset">
+    </form>
+    <script type="text/javascript">
+    var test = document.getElementById('test');
+    test.onsubmit = function(){
+        console.log('提交了');
+    }
+    test.onreset = function(){
+        console.log('重置了');
+    }
+    </script>
+</body>
+
+</html>
